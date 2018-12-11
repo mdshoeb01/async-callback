@@ -14,6 +14,10 @@ function fakeAjax(url,cb) {
 }
 let status={"The first text":2, "The middle text":2,	"The last text":2};
 
+//value:2 for default
+//vallue:1 for waiting
+//value:0 for printed
+
 function getFile(file) {
 	fakeAjax(file,function(text){
 		// what do we do here?
