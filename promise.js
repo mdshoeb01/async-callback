@@ -14,14 +14,29 @@ function fakeAjax(url,cb) {
 }
 
 function getFile(file) {
+
 	let p=new Promise((resolve,reject)=>{
-		fakeAjax(file,(txt)=>resolve(txt))
+		fakeAjax(file,(txt)=>{
+			if(file=="file4"){
+				reject("Error for file4");
+			}
+			else 	resolve(txt)
+		});
+
 	});
 	return p;
 }
+
 let p1=getFile("file1");
 let p2=getFile("file2");
 let p3=getFile("file3");
+let p4=getFile("file4");
+
+// p4.then((txt)=>{
+// 	console.log(txt);
+// }).catch((e)=>console.log(e));
+
+
 
 p1.then((txt)=>{
 	console.log(txt);
@@ -30,5 +45,10 @@ p1.then((txt)=>{
 	console.log(txt);
 	return p3;
 }).then((txt)=>{
-	console.log(txt)
+	console.log(txt);
+	return p4;
+}).then((txt)=>{
+	console.log(txt);
+}).catch((e)=>{
+	console.error(e);
 })

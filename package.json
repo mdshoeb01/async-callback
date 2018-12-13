@@ -1,0 +1,15 @@
+{
+  "name": "03-mohammed-async-callback",
+  "version": "1.0.0",
+  "description": "lets work on async callbacks.",
+  "main": "async-await.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:mountblue/dec-2018-js-backend/03-mohammed-async-callback.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
